@@ -1,8 +1,19 @@
 
 package libs;
-
+/**
+ * 
+ * @author Alicia Mohedo Gatón
+ *
+ */
 
 public class Funciones {
+	/**
+	 * función en la que dados tres números nos devuelve el número central
+	 * @param num1 int primer número
+	 * @param num2 int segundo número
+	 * @param num3 int tercer número
+	 * @return int número colocado en medio
+	 */
 	
 	public int devuelveCentral(int num1, int num2, int num3) {
 		
@@ -17,7 +28,12 @@ public class Funciones {
 		}
 		return enMedio;
 	}
-	
+	/**
+	 * Dado un año te dice si es bisiesto
+	 * @param año int el año a consultar
+	 * @return bisiesto Boolean año bisiesto
+	 * 
+	 */
 	public boolean esBisiesto(int año) {
 		boolean bisiesto = false;
 		if (año %4 == 0 ) {
@@ -27,12 +43,17 @@ public class Funciones {
 				bisiesto=true;
 			}
 		} else  {
-			bisiesto=true;
+			bisiesto= false;
 		}
 		return bisiesto;
 	}
-	
-	public static boolean esCapicua(int v[]) {
+	/**
+	 * se pasa un vector por la función y devuelve si el vector es capícua
+	 * 
+	 * @param v int [], el vector que se pasa
+	 * @return capicua boolean es capicua
+	 */
+	public  boolean esCapicua(int v[]) {
 		boolean capicua = true;
 		
 		for (int i=0, j=v.length-1; i<v.length/2; i++,j--) {
@@ -42,8 +63,15 @@ public class Funciones {
 		}
 		return capicua;
 	}
-
-	public static int [] suma_vectores(int v[], int v2[]) {
+	/**
+	 * Sumamos dos vectores 
+	 * 
+	 * @param v int[] primer vector
+	 * @param v2 int[] segundo vector
+	 * @return int suma de vectores
+	 * @throws ArithmeticException No se pueden pasar vectores de distinto tamaño
+	 */
+	public  int [] suma_vectores(int v[], int v2[]) {
 		int vector_suma [] = new int[v.length];
 		
 		if (v.length!=v2.length) 
